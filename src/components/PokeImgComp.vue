@@ -1,7 +1,8 @@
 <template>
   <div class="sm:flex justify-center">
-    <div class="flex justify-center items-start sm:items-center">
+    <div class="pokemon-wrapper">
       <img v-if="imgHidden" class="poke-img img-hidden" :src="imgUrl" alt="" />
+
       <img v-else class="poke-img" :src="imgUrl" alt="" />
       <img
         class="poke-bg-sparks"
@@ -9,6 +10,7 @@
         alt=""
       />
     </div>
+
     <img
       class="pokemon-question"
       src="../assets/img/qssp.aa4be5dd.png"
@@ -48,9 +50,16 @@ export default {
 </script>
 
 <style scoped>
+.pokemon-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
 .poke-img {
   width: 200px;
-  object-fit: contain;
+  max-height: 200px;
   z-index: 2;
 }
 
@@ -68,5 +77,24 @@ export default {
 .img-hidden {
   filter: invert(90%) sepia(45%) saturate(981%) hue-rotate(359deg)
     brightness(5%) contrast(104%);
+}
+
+@media screen and (max-width: 400px) {
+  .pokemon-wrapper {
+    background: lightblue;
+  }
+
+  .poke-img {
+    max-width: 125px;
+  }
+
+  .poke-bg-sparks {
+    margin-left: -200px;
+  }
+
+  .pokemon-question {
+    width: 200px;
+    justify-self: center;
+  }
 }
 </style>
