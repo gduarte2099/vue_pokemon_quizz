@@ -66,7 +66,7 @@ class PokeService {
     aux = []
     let n = 0
     let pokemon 
-    while (n < 20) {
+    while (n < 10) {
       randomIndex = Math.round(Math.random() * (50 - 0) + 0);
       pokemon = pokemons[randomIndex]
       if (existe() === false) {
