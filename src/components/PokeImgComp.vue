@@ -80,9 +80,6 @@ export default {
 }
 
 @media screen and (max-width: 400px) {
-  .pokemon-wrapper {
-    background: lightblue;
-  }
 
   .poke-img {
     max-width: 125px;
