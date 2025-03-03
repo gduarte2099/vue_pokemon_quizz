@@ -2,7 +2,7 @@
   <!--  <div v-for="(pokemon, index) in pokeList" :key="index">
     {{ pokemon.name }} <br>
   </div> -->
-  <div class="bg-red p-12 rounded-lg shadow-md shadow-[#385aa7] w-full mt-4">
+  <div class="bg-red p-12 rounded-lg shadow-md shadow-[#385aa7] w-full lg:mt-4">
     <div v-if="pokeIndex < pokeList.length">
       <template
         v-for="(answer, index) in pokeList[pokeIndex]['answers']"
